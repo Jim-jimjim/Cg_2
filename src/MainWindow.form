@@ -1,13 +1,271 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="MainWindow">
-  <grid id="27dc6" row-count="1" column-count="1" layout-manager="GridLayoutManager">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
-      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+      <xy x="20" y="20" width="929" height="704"/>
     </constraints>
     <properties/>
     <border type="none"/>
-    <children/>
+    <children>
+      <grid id="4cf8f" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="600" height="600"/>
+            <maximum-size width="600" height="600"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="95a2b" binding="Draw" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <minimum-size width="600" height="600"/>
+                <maximum-size width="600" height="600"/>
+              </grid>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+        </children>
+      </grid>
+      <grid id="ed7f3" layout-manager="GridLayoutManager" row-count="17" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="100" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="76f6d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Точка трансформации"/>
+            </properties>
+          </component>
+          <component id="9504c" class="javax.swing.JTextField" binding="x0">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="25" height="-1"/>
+                <maximum-size width="75" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="0"/>
+              <toolTipText value="x"/>
+            </properties>
+          </component>
+          <component id="fc18c" class="javax.swing.JTextField" binding="y0">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="50" height="-1"/>
+                <maximum-size width="75" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="0"/>
+              <toolTipText value="y"/>
+            </properties>
+          </component>
+          <component id="5987f" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Вращение против часовой стрелки"/>
+            </properties>
+          </component>
+          <component id="14226" class="javax.swing.JTextField" binding="grad">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="50" height="-1"/>
+                <maximum-size width="75" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="0"/>
+              <toolTipText value="grad"/>
+            </properties>
+          </component>
+          <component id="b019f" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Масштабирование"/>
+            </properties>
+          </component>
+          <component id="fcf6d" class="javax.swing.JTextField" binding="mas">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="50" height="-1"/>
+                <maximum-size width="75" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="0"/>
+              <toolTipText value="k"/>
+            </properties>
+          </component>
+          <component id="4ded4" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Растяжение по х/у"/>
+            </properties>
+          </component>
+          <component id="40e84" class="javax.swing.JTextField" binding="rY">
+            <constraints>
+              <grid row="9" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="50" height="-1"/>
+                <maximum-size width="75" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="0"/>
+            </properties>
+          </component>
+          <component id="63b62" class="javax.swing.JTextField" binding="rX">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="50" height="-1"/>
+                <maximum-size width="75" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="0"/>
+              <toolTipText value="x"/>
+            </properties>
+          </component>
+          <component id="4ec53" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="10" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Перемещение"/>
+            </properties>
+          </component>
+          <component id="7724a" class="javax.swing.JTextField" binding="pX">
+            <constraints>
+              <grid row="11" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="50" height="-1"/>
+                <maximum-size width="75" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="0"/>
+              <toolTipText value="x"/>
+            </properties>
+          </component>
+          <component id="25c6f" class="javax.swing.JTextField" binding="pY">
+            <constraints>
+              <grid row="12" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="50" height="-1"/>
+                <maximum-size width="75" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="0"/>
+              <toolTipText value="y"/>
+            </properties>
+          </component>
+          <grid id="3dfd" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="f7c6e" class="javax.swing.JCheckBox" binding="target">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Изменить точку трансформации"/>
+                </properties>
+              </component>
+              <vspacer id="25b98">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="f794a" class="javax.swing.JCheckBox" binding="rotate">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Вращение"/>
+                </properties>
+              </component>
+              <component id="8666d" class="javax.swing.JCheckBox" binding="mash">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Масштаб"/>
+                </properties>
+              </component>
+              <component id="49d84" class="javax.swing.JCheckBox" binding="rXCB">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Растяжение"/>
+                </properties>
+              </component>
+              <component id="f6e7a" class="javax.swing.JCheckBox" binding="pXCB">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Перемещение"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <component id="6a399" class="javax.swing.JButton" binding="trans">
+            <constraints>
+              <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Трансформировать"/>
+            </properties>
+          </component>
+          <vspacer id="dc066">
+            <constraints>
+              <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="f80bf" class="javax.swing.JButton" binding="resetButton" default-binding="true">
+            <constraints>
+              <grid row="15" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="reset"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <hspacer id="a93aa">
+        <constraints>
+          <grid row="0" column="2" row-span="2" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="ca63e">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+    </children>
   </grid>
 </form>
