@@ -2,6 +2,7 @@ import org.ejml.simple.SimpleMatrix;
 
 public class Aff {
     //RealMatrix matrix = new Array2DRowRealMatrix(new double[][]{{0,1}, {1, 0}});
+    private static int[] tr0 = {0, 0};
 
     public static void rotate(Triangle shape, double theta) {
         SimpleMatrix matrix = new SimpleMatrix(new double[][]{{Math.cos(theta), Math.sin(theta), 0},
@@ -31,21 +32,19 @@ public class Aff {
         work(shape, matrix);
     }
 
-    public static void tt(Triangle shape, double x, double y) {
-        for (int i = 0; i < shape.n; i++) {
-            shape.cordX[i] -= x;
-            shape.cordY[i] -= y;
-        }
+    public static void tt(double x, double y) {
+        tr0[0] = (int) x;
+        tr0[1] = (int) y;
     }
 
     private static void work(Triangle shape, SimpleMatrix matrix) {
         int[] tempX = shape.cordX;
         int[] tempY = shape.cordY;
         for (int i = 0; i < shape.n; i++) {
-            SimpleMatrix temp = new SimpleMatrix(new double[][]{{tempX[i], tempY[i], 1}});
+            SimpleMatrix temp = new SimpleMatrix(new double[][]{{tempX[i] - tr0[0], tempY[i] - tr0[1], 1}});
             temp = temp.mult(matrix);
-            shape.cordX[i] = (int) temp.get(0, 0);
-            shape.cordY[i] = (int) temp.get(0, 1);
+            shape.cordX[i] = (int) temp.get(0, 0) + tr0[0];
+            shape.cordY[i] = (int) temp.get(0, 1) + tr0[1];
         }
     }
 }

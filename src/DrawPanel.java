@@ -9,6 +9,7 @@ public class DrawPanel extends JPanel {
         super.paintComponent(gr);
         Graphics2D g = (Graphics2D) gr;
         start(g);
+        g.setColor(Color.CYAN);
         g.draw(triangle.draw());
     }
 
@@ -29,7 +30,7 @@ public class DrawPanel extends JPanel {
     }
 
     public void tt(double x, double y) {
-        Aff.tt(triangle, x, y);
+        Aff.tt(x, y);
     }
     private static void start(Graphics2D g) {
         g.setColor(Color.white);
